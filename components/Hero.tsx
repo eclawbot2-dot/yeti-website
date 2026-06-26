@@ -1,49 +1,54 @@
-import { HERO } from "@/lib/content";
+import { HERO, FINDER } from "@/lib/content";
+import TireSelector from "./TireSelector";
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-28 sm:pt-32">
-      {/* Background image + grade */}
+    <section id="top" className="relative overflow-hidden">
+      {/* Road photo — visible, with a soft scrim only for text legibility */}
       <div className="absolute inset-0 -z-10">
         <img
-          src="/images/hero.jpg"
-          alt="High-performance sports car wheel and tire in detailed studio light"
+          src="/images/hero-road.jpg"
+          alt="A winding mountain road through snow-dusted peaks at sunset — the road ahead"
           className="h-full w-full object-cover object-center"
           fetchPriority="high"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-carbon-950/70 via-carbon-950/80 to-carbon-950" />
-        <div className="absolute inset-0 bg-gradient-to-r from-carbon-950 via-carbon-950/40 to-transparent" />
-        <div className="absolute inset-0 bg-ice-grid bg-[length:44px_44px] opacity-[0.35]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-carbon-950/80 via-carbon-950/45 to-carbon-950/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-carbon-950/70 via-transparent to-carbon-950/30" />
       </div>
 
-      <div className="container-x pb-20 pt-16 sm:pb-28 sm:pt-24">
-        <div className="max-w-2xl animate-fade-up">
-          <span className="eyebrow">
-            <span className="inline-block h-px w-6 bg-glacier-300" />
+      <div className="container-x grid items-center gap-10 pb-16 pt-28 sm:pt-32 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:pb-24">
+        {/* Left: concierge value proposition */}
+        <div className="animate-fade-up">
+          <span className="eyebrow-on-photo">
+            <span className="inline-block h-px w-6 bg-brand-400" />
             {HERO.eyebrow}
           </span>
-          <h1 className="mt-5 font-display text-4xl font-bold leading-[1.04] tracking-tight text-frost sm:text-5xl md:text-6xl">
+          <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight text-white drop-shadow sm:text-5xl md:text-[3.4rem]">
             {HERO.title}{" "}
-            <span className="bg-gradient-to-r from-glacier-200 to-glacier-400 bg-clip-text text-transparent">
-              {HERO.titleAccent}
-            </span>
+            <span className="text-brand-400">{HERO.titleAccent}</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-frost/75">{HERO.sub}</p>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">{HERO.sub}</p>
+          <p className="mt-6 text-sm font-medium text-white/65">{HERO.trust}</p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a href="#join" className="btn-primary">
-              {HERO.primaryCta}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
-            <a href="#how" className="btn-ghost">
-              {HERO.secondaryCta}
-            </a>
+          <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/80">
+            {["Best-price sourcing", "Install coordinated", "Reminders handled"].map((t) => (
+              <li key={t} className="inline-flex items-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="text-brand-400">
+                  <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {t}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Right: the Tire Finder app — front and center */}
+        <div id="finder" className="animate-fade-up scroll-mt-24" style={{ animationDelay: "120ms" }}>
+          <div className="mb-3 text-center lg:text-left">
+            <h2 className="font-display text-base font-bold uppercase tracking-wider text-white/90">{FINDER.heading}</h2>
           </div>
-
-          <p className="mt-7 text-sm text-frost/55">{HERO.trust}</p>
+          <TireSelector />
         </div>
       </div>
     </section>

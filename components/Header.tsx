@@ -15,17 +15,20 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // On the photo hero, the un-scrolled header sits on a dark image → light text.
+  const onPhoto = !scrolled && !open;
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "border-b border-white/10 bg-carbon-950/80 backdrop-blur-xl" : "border-b border-transparent"
+        scrolled || open ? "border-b border-paper-200 bg-white/90 backdrop-blur-xl" : "border-b border-transparent"
       }`}
     >
       <nav className="container-x flex h-16 items-center justify-between" aria-label="Primary">
-        <a href="#top" className="flex items-center gap-2.5" aria-label={`${"YETI"} Tires home`}>
+        <a href="#top" className="flex items-center gap-2.5" aria-label="YETI Tires home">
           <Logo className="h-8 w-8" />
-          <span className="font-display text-lg font-bold tracking-tight text-frost">
-            YETI<span className="text-glacier-300">™</span> Tires
+          <span className={`font-display text-lg font-bold tracking-tight ${onPhoto ? "text-white" : "text-ink-900"}`}>
+            YETI<span className="text-brand-500">™</span> Tires
           </span>
         </a>
 
@@ -34,7 +37,7 @@ export default function Header() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="text-sm font-medium text-frost/70 transition-colors hover:text-glacier-200"
+                className={`text-sm font-medium transition-colors hover:text-brand-500 ${onPhoto ? "text-white/85" : "text-ink-600"}`}
               >
                 {item.label}
               </a>
@@ -50,13 +53,12 @@ export default function Header() {
 
         <button
           type="button"
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 text-frost"
+          className={`md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border ${onPhoto ? "border-white/30 text-white" : "border-paper-200 text-ink-900"}`}
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
         >
-          <span className="sr-only">Menu</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             {open ? (
               <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -67,28 +69,24 @@ export default function Header() {
         </button>
       </nav>
 
-      <div
-        id="mobile-menu"
-        hidden={!open}
-        className="md:hidden border-t border-white/10 bg-carbon-950/95 backdrop-blur-xl"
-      >
+      <div id="mobile-menu" hidden={!open} className="md:hidden border-t border-paper-200 bg-white">
         <ul className="container-x flex flex-col py-4">
-            {NAV.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="block py-3 text-base font-medium text-frost/80 hover:text-glacier-200"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-            <li className="pt-3">
-              <a href="#join" onClick={() => setOpen(false)} className="btn-primary w-full">
-                Join the Club
+          {NAV.map((item) => (
+            <li key={item.href}>
+              <a
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="block py-3 text-base font-medium text-ink-700 hover:text-brand-500"
+              >
+                {item.label}
               </a>
             </li>
+          ))}
+          <li className="pt-3">
+            <a href="#join" onClick={() => setOpen(false)} className="btn-primary w-full">
+              Join the Club
+            </a>
+          </li>
         </ul>
       </div>
     </header>

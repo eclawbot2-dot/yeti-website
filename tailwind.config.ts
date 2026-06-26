@@ -5,57 +5,57 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Glacier Performance palette
+        // YETI brand red/orange accent
+        brand: {
+          50: "#fff3ef",
+          100: "#ffe2d8",
+          200: "#ffc3ac",
+          300: "#ff9d76",
+          400: "#ff6a2c", // bright orange
+          500: "#f24f1e", // primary red-orange
+          600: "#d83c12", // hover
+          700: "#b32f0d",
+          800: "#8f2710",
+          900: "#742312",
+        },
+        ink: {
+          900: "#13161b", // near-black text
+          800: "#1f242c",
+          700: "#363c46",
+          600: "#5b6470",
+          500: "#7c8593",
+          400: "#9aa3b0",
+        },
+        paper: {
+          0: "#ffffff",
+          50: "#f7f8fa", // light section bg
+          100: "#eef1f4",
+          200: "#e2e6eb", // borders
+        },
+        // dark footer / hero overlays
         carbon: {
-          950: "#05070a", // near-black base
-          900: "#0a0e14",
-          800: "#11161f",
-          700: "#1a212d",
-          600: "#26303f",
+          950: "#0c0f14",
+          900: "#12161c",
+          800: "#1a2028",
         },
-        glacier: {
-          50: "#eafbff",
-          100: "#c9f3ff",
-          200: "#94e7ff",
-          300: "#52d6ff",
-          400: "#1cc0f5", // primary ice accent
-          500: "#00a4dc",
-          600: "#0682b3",
-          700: "#0d6890",
-          800: "#155575",
-          900: "#164862",
-        },
-        ember: {
-          400: "#ff7a3c", // warm performance accent (sparingly)
-          500: "#f2530f",
-        },
-        frost: "#f4f9fc",
       },
       fontFamily: {
         display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
         sans: ["var(--font-body)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(28,192,245,0.25), 0 18px 60px -20px rgba(28,192,245,0.45)",
-        card: "0 24px 60px -28px rgba(0,0,0,0.85)",
-      },
-      backgroundImage: {
-        "ice-grid":
-          "linear-gradient(to right, rgba(148,231,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,231,255,0.06) 1px, transparent 1px)",
+        card: "0 10px 40px -16px rgba(19,22,27,0.18)",
+        lift: "0 24px 60px -24px rgba(19,22,27,0.30)",
+        brand: "0 12px 34px -10px rgba(242,79,30,0.45)",
       },
       keyframes: {
         "fade-up": {
           "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        "drift": {
-          "0%,100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
       },
       animation: {
         "fade-up": "fade-up 0.7s cubic-bezier(0.22,1,0.36,1) both",
-        drift: "drift 7s ease-in-out infinite",
       },
     },
   },

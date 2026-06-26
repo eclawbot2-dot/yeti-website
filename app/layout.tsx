@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: `${SITE.name} — The best tires, at the best price, without the hassle`,
     description: SITE.description,
     url: SITE.url,
-    images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "YETI Tires — high-performance tire and wheel" }],
+    images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "YETI Tires — a winding mountain road, built for the road ahead" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
-export const viewport = { themeColor: "#05070a" };
+export const viewport = { themeColor: "#ffffff" };
 
 const orgJsonLd = {
   "@context": "https://schema.org",
