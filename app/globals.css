@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+/* Progressive enhancement: scroll-reveal elements are hidden via inline
+   style and un-hidden by JS. If JS is disabled, force them visible so no
+   content is ever lost (also covers non-JS crawlers and headless renders). */
+@media (scripting: none) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  @apply bg-carbon-950 text-frost/90 font-sans antialiased;
+  background-image:
+    radial-gradient(1100px 600px at 75% -10%, rgba(28, 192, 245, 0.12), transparent 60%),
+    radial-gradient(900px 500px at 0% 10%, rgba(13, 104, 144, 0.1), transparent 55%);
+  background-attachment: fixed;
+}
+
+/* Accessible focus ring */
+:where(a, button, input, textarea, [tabindex]):focus-visible {
+  outline: 2px solid theme("colors.glacier.300");
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skip link */
+.skip-link {
+  @apply sr-only;
+}
+.skip-link:focus {
+  @apply not-sr-only fixed left-4 top-4 z-[100] rounded-lg bg-glacier-400 px-4 py-2 font-semibold text-carbon-950;
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+  .glass {
+    @apply rounded-2xl border border-white/10 bg-white/[0.035] backdrop-blur-md;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-glacier-400 px-7 py-3.5 text-[15px] font-semibold tracking-tight text-carbon-950 transition-all duration-200 hover:bg-glacier-300 hover:shadow-glow focus-visible:shadow-glow;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-[15px] font-semibold tracking-tight text-frost transition-colors duration-200 hover:border-glacier-300/60 hover:text-glacier-200;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-glacier-300;
+  }
+  .section-heading {
+    @apply font-display text-3xl font-bold leading-[1.08] tracking-tight text-frost sm:text-4xl md:text-[2.75rem];
+  }
+}
+
+/* Frosted hairline used to separate sections */
+.hairline {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(148, 231, 255, 0.25),
+    transparent
+  );
+}
