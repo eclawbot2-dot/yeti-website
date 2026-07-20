@@ -1,5 +1,78 @@
-import { CONCIERGE, HOW, SHOPS, NETWORK, BENEFITS, PERFORMANCE, SUSTAINABILITY } from "@/lib/content";
+import { CONCIERGE, HOW, SHOPS, NETWORK, BENEFITS, PERFORMANCE, SUSTAINABILITY, COOP } from "@/lib/content";
 import Reveal from "./Reveal";
+
+function CheckList({ points, onDark = false }: { points: string[]; onDark?: boolean }) {
+  return (
+    <ul className="mt-5 space-y-3">
+      {points.map((p) => (
+        <li key={p} className="flex items-start gap-3">
+          <span className={`mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full ${onDark ? "bg-brand-500/20 text-brand-300" : "bg-brand-50 text-brand-600"}`}>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+          <span className={`text-[15px] leading-snug ${onDark ? "text-white/85" : "text-ink-700"}`}>{p}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/* The co-op thesis: drivers ⇄ YETI ⇄ shops, everybody wins. */
+export function CoOp() {
+  return (
+    <section id="coop" className="bg-paper-0 py-20 sm:py-28">
+      <div className="container-x">
+        <Reveal>
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="flex justify-center">
+              <Eyebrow>{COOP.eyebrow}</Eyebrow>
+            </div>
+            <h2 className="section-heading mt-4">{COOP.heading}</h2>
+            <p className="mt-5 text-lg leading-relaxed text-ink-600">{COOP.lead}</p>
+          </div>
+        </Reveal>
+
+        <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-[1fr_0.9fr_1fr]">
+          {/* Drivers */}
+          <Reveal>
+            <div className="card h-full p-7">
+              <span className="eyebrow"><span className="inline-block h-px w-6 bg-brand-500" />For Drivers</span>
+              <h3 className="mt-3 font-display text-xl font-bold text-ink-900">{COOP.drivers.label}</h3>
+              <CheckList points={COOP.drivers.points} />
+            </div>
+          </Reveal>
+
+          {/* YETI hub — the connective tissue */}
+          <Reveal delay={90}>
+            <div className="flex h-full flex-col justify-center rounded-2xl bg-carbon-950 p-7 text-center text-white shadow-lg">
+              <div className="mx-auto mb-4 flex items-center justify-center gap-3 text-brand-400" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M11 7l-5 5 5 5M5 12h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-500 font-display text-lg font-bold text-white">Y</span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 7l5 5-5 5M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </div>
+              <h3 className="font-display text-lg font-bold text-white">{COOP.hub.label}</h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-white/75">{COOP.hub.body}</p>
+            </div>
+          </Reveal>
+
+          {/* Shops */}
+          <Reveal delay={180}>
+            <div className="card h-full p-7">
+              <span className="eyebrow"><span className="inline-block h-px w-6 bg-brand-500" />For Shops</span>
+              <h3 className="mt-3 font-display text-xl font-bold text-ink-900">{COOP.shops.label}</h3>
+              <CheckList points={COOP.shops.points} />
+            </div>
+          </Reveal>
+        </div>
+
+        <Reveal>
+          <p className="mx-auto mt-10 max-w-2xl text-center font-display text-lg font-semibold text-ink-900">{COOP.footnote}</p>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
