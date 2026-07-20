@@ -4,8 +4,8 @@
 export const SITE = {
   name: "YETI™ Tires",
   shortName: "YETI Tires",
-  domain: "yeti3.jahdev.com",
-  url: "https://yeti3.jahdev.com",
+  domain: "yeti2.jahdev.com",
+  url: "https://yeti2.jahdev.com",
   tagline: "The tire club connecting drivers to the shops that get it right.",
   description:
     "YETI™ Tires is a tire brand and a members club — matching drivers to the right tires and a vetted local shop, and running the relationship (pricing, reminders, seasons, loyalty) for the life of the vehicle.",
