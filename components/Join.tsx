@@ -22,7 +22,7 @@ export default function Join() {
           <p className="mt-5 max-w-md text-lg leading-relaxed text-white/80">{JOIN.sub}</p>
 
           <a
-            href={`mailto:${SITE.email}?subject=${encodeURIComponent("Call your YETI pit crew")}`}
+            href={`mailto:${SITE.email}?subject=${encodeURIComponent(JOIN.cta)}`}
             className="group mt-8 inline-flex items-center gap-3 text-white"
           >
             <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand-500 text-white transition-colors group-hover:bg-brand-400">

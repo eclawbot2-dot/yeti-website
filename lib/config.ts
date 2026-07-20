@@ -4,11 +4,11 @@
 export const SITE = {
   name: "YETI™ Tires",
   shortName: "YETI Tires",
-  domain: "yeti.jahdev.com",
-  url: "https://yeti.jahdev.com",
-  tagline: "Your Automotive Concierge. Built for the Road Ahead.",
+  domain: "yeti2.jahdev.com",
+  url: "https://yeti2.jahdev.com",
+  tagline: "The tire club connecting drivers to the shops that get it right.",
   description:
-    "YETI™ Tires is your automotive concierge — a members club that handles tire selection, pricing, shipping and install coordination for you, remotely. The best tires at the best price, no hassle.",
+    "YETI™ Tires is a tire brand and a members club — matching drivers to the right tires and a vetted local shop, and running the relationship (pricing, reminders, seasons, loyalty) for the life of the vehicle.",
   // Contact
   email: "Info@YetiTires.com", // confirmed brand address
   // TODO: confirm a real phone number for the "Call your Yeti Pit Crew" CTA. Until then, no tel: link is rendered.

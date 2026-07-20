@@ -65,7 +65,7 @@ export default function Footer() {
         <div className="hairline mt-12 opacity-20" />
         <div className="mt-6 flex flex-col items-start justify-between gap-3 text-xs text-white/40 sm:flex-row sm:items-center">
           <p>© {year} {SITE.shortName}. {FOOTER.rights}</p>
-          <p>Your Automotive Concierge.</p>
+          <p>{SITE.tagline}</p>
         </div>
       </div>
     </footer>

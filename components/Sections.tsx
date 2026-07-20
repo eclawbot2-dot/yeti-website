@@ -1,4 +1,4 @@
-import { CONCIERGE, HOW, BENEFITS, PERFORMANCE, SUSTAINABILITY } from "@/lib/content";
+import { CONCIERGE, HOW, SHOPS, NETWORK, BENEFITS, PERFORMANCE, SUSTAINABILITY } from "@/lib/content";
 import Reveal from "./Reveal";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
@@ -13,11 +13,11 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 /* The spine of the site: the concierge value. */
 export function Concierge() {
   return (
-    <section id="concierge" className="bg-paper-0 py-20 sm:py-28">
+    <section id="drivers" className="bg-paper-0 py-20 sm:py-28">
       <div className="container-x">
         <Reveal>
           <div className="max-w-3xl">
-            <Eyebrow>Your Concierge</Eyebrow>
+            <Eyebrow>For Drivers</Eyebrow>
             <h2 className="section-heading mt-4">{CONCIERGE.heading}</h2>
             <p className="mt-5 text-lg leading-relaxed text-ink-600">{CONCIERGE.lead}</p>
           </div>
@@ -60,6 +60,74 @@ export function How() {
             </Reveal>
           ))}
         </ol>
+      </div>
+    </section>
+  );
+}
+
+/* For Shops: the partner side. Dark band to separate the audience. */
+export function Shops() {
+  return (
+    <section id="shops" className="bg-carbon-950 py-20 text-white sm:py-28">
+      <div className="container-x">
+        <Reveal>
+          <div className="max-w-3xl">
+            <span className="eyebrow-on-photo">
+              <span className="inline-block h-px w-6 bg-brand-400" />
+              For Shops
+            </span>
+            <h2 className="section-heading mt-4 text-white">{SHOPS.heading}</h2>
+            <p className="mt-5 text-lg leading-relaxed text-white/75">{SHOPS.lead}</p>
+          </div>
+        </Reveal>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {SHOPS.values.map((v, i) => (
+            <Reveal key={v.title} delay={(i % 3) * 90}>
+              <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-6 transition-transform duration-200 hover:-translate-y-1">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-500/20 text-brand-400">
+                  <span className="font-display text-sm font-bold">{String(i + 1).padStart(2, "0")}</span>
+                </div>
+                <h3 className="font-display text-lg font-semibold text-white">{v.title}</h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-white/70">{v.body}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal>
+          <div className="mt-10">
+            <a href="#join" className="btn-primary">
+              {SHOPS.cta}
+            </a>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* The Network: the trust layer. Light band, 3-up stat row like Performance. */
+export function Network() {
+  return (
+    <section id="network" className="bg-paper-50 py-20 sm:py-28">
+      <div className="container-x">
+        <Reveal>
+          <div className="max-w-3xl">
+            <Eyebrow>The Network</Eyebrow>
+            <h2 className="section-heading mt-4">{NETWORK.heading}</h2>
+            <p className="mt-5 text-lg leading-relaxed text-ink-600">{NETWORK.body}</p>
+          </div>
+        </Reveal>
+        <dl className="mt-10 grid gap-4 sm:grid-cols-3">
+          {NETWORK.points.map((s, i) => (
+            <Reveal key={s.k} delay={i * 90}>
+              <div className="card h-full p-4">
+                <dt className="text-xs font-bold uppercase tracking-wider text-brand-600">{s.k}</dt>
+                <dd className="mt-1 font-display text-lg font-bold text-ink-900">{s.v}</dd>
+                <dd className="mt-1 text-xs leading-snug text-ink-500">{s.note}</dd>
+              </div>
+            </Reveal>
+          ))}
+        </dl>
       </div>
     </section>
   );

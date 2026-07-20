@@ -1,51 +1,35 @@
-// All site copy in one place (single source of truth). Concierge-forward,
-// benefit-led, honest. No fabricated stats, reviews, brands, or prices.
+// All site copy in one place (single source of truth). Two-sided tire-club
+// strategy: YETI is a tire brand + a members club connecting drivers to a vetted
+// network of local tire shops, and running the relationship for both sides.
+// Honest — no fabricated stats, reviews, brands, prices, or shop counts.
 
 export const NAV = [
-  { label: "Tire Finder", href: "#finder" },
-  { label: "Your Concierge", href: "#concierge" },
+  { label: "For Drivers", href: "#drivers" },
+  { label: "For Shops", href: "#shops" },
   { label: "How It Works", href: "#how" },
-  { label: "Benefits", href: "#benefits" },
+  { label: "The Network", href: "#network" },
   { label: "FAQ", href: "#faq" },
 ];
 
 export const HERO = {
-  eyebrow: "Your Automotive Concierge",
-  title: "The right tires, handled for you —",
-  titleAccent: "built for the road ahead.",
-  sub: "Skip the spec sheets and the showroom. Answer a few quick questions and your personal YETI™ pit crew sources the right tires, at the best price, and coordinates the install near you.",
-  trust: "No commitments. No upsell games. A real pit crew in your corner.",
+  eyebrow: "The Tire Club",
+  title: "The tire club that routes you to the right shop —",
+  titleAccent: "and stays in your corner.",
+  sub: "YETI™ is a tire brand and a members club. We match you to the right tires, route you to a vetted local shop that does the job right, and run the relationship for the life of your vehicle — pricing, reminders, seasons, the next set.",
+  trust: "Real tires. Trusted local shops. One crew that remembers — for the drivers who join and the shops that serve them.",
 };
 
-// ---- Concierge value (the spine of the site) ----
+// ---- For Drivers (the member value) ----
 export const CONCIERGE = {
-  heading: "A real pit crew, not a shopping cart",
-  lead: "Anyone can sell you a tire. YETI™ gives you a person who owns the whole job — so you never decode a spec sheet, chase a shop, or overpay again.",
+  heading: "For drivers: your crew, your shop, handled",
+  lead: "Anyone can sell you a tire. YETI™ gives you a club that owns the whole job — the right tires, a trusted local shop, and someone who remembers your vehicle, so you never decode a spec sheet or chase a shop again.",
   values: [
-    {
-      title: "A dedicated human",
-      body: "One concierge who knows your vehicle and how you drive — not a call center, not a chatbot. Same crew, every time.",
-    },
-    {
-      title: "We do the research",
-      body: "Load index, speed rating, fitment, tread-wear, all-weather grip — we translate the jargon and bring you the right call.",
-    },
-    {
-      title: "Best price, sourced for you",
-      body: "We shop our preferred network and bring you the best price we can secure. Clear and straight — no upsell theater.",
-    },
-    {
-      title: "Install, coordinated",
-      body: "We ship to a trusted shop near you and book the appointment. You just show up — or we arrange it around your schedule.",
-    },
-    {
-      title: "We remember, so you don't",
-      body: "Seasonal swaps, replacement reminders before tread runs low, records of what's on your car. Handled in the background.",
-    },
-    {
-      title: "One relationship",
-      body: "Tires, rotations, seasons, the next set — one point of contact for the life of your vehicle. That's the club.",
-    },
+    { title: "A dedicated human", body: "One concierge who knows your vehicle and how you drive — not a call center, not a chatbot. Same crew, every time." },
+    { title: "We do the research", body: "Load index, speed rating, fitment, tread-wear, all-weather grip — we translate the jargon and bring you the right call." },
+    { title: "Member pricing", body: "Club pricing sourced through our shop network, brought to you straight — no upsell theater." },
+    { title: "Routed to a vetted shop", body: "Matched to a trusted local shop that meets our standard — appointment booked, install coordinated." },
+    { title: "We remember, so you don't", body: "Seasonal swaps, replacement reminders before tread runs low, a record of what's on your car. Handled in the background." },
+    { title: "One relationship, for life", body: "Tires, rotations, seasons, the next set — one point of contact for the life of your vehicle. That's the club." },
   ],
 };
 
@@ -53,45 +37,70 @@ export const CONCIERGE = {
 export const FINDER = {
   eyebrow: "Free • 30 seconds",
   heading: "Find your tire in 30 seconds",
-  sub: "Tell us a little about your driving. We'll point you to the right type of tire — then your concierge sources the exact set.",
+  sub: "Tell us a little about your driving. We'll point you to the right type of tire — then the club matches you to a shop and the exact set.",
   restart: "Start over",
   resultEyebrow: "Your recommended tire type",
-  resultCtaLead: "Want your pit crew to source the exact set at the best price?",
+  resultCtaLead: "Want the club to source the exact set and route you to a vetted shop?",
   resultCta: "Get my tire match",
-  resultNote: "No commitment. We'll reply with options and pricing — you decide.",
+  resultNote: "No commitment. We'll reply with options, pricing, and a shop near you — you decide.",
   back: "Back",
 };
 
 export const HOW = {
-  heading: "How it works",
-  sub: "You drive. We handle the rest.",
+  heading: "How the club works",
+  sub: "One system connecting drivers to the right shop — and keeping them there.",
   steps: [
     { n: "01", title: "Tell us your ride", body: "Your vehicle, your climate, how you drive. Use the tire finder above — 30 seconds." },
-    { n: "02", title: "Your concierge matches", body: "A real person confirms fitment and recommends the right tires at the best price." },
-    { n: "03", title: "We ship + schedule", body: "We ship to a trusted shop near you and coordinate the install on your schedule." },
-    { n: "04", title: "Drive on — we remember", body: "You roll out on the right rubber, with reminders before you ever run low." },
+    { n: "02", title: "We match tires + a shop", body: "The right tire type at member pricing, and a vetted local shop near you that meets our standard." },
+    { n: "03", title: "Booked and handled", body: "Appointment set, install coordinated. You just show up — the club lines it all up." },
+    { n: "04", title: "We keep the relationship", body: "Reminders, seasonal swaps, loyalty, the next set — managed for the life of the vehicle." },
+  ],
+};
+
+// ---- For Shops (the partner side) ----
+export const SHOPS = {
+  heading: "For shops: a fuller bay and customers for life",
+  lead: "YETI™ sends you members who are ready to buy — then runs the marketing, comms, and follow-up so they come back. You do what you do best; the club owns the relationship.",
+  values: [
+    { title: "Qualified members, not clicks", body: "We route ready-to-buy drivers to your bay, matched by fitment and location. No tire-kickers, no lead forms to chase." },
+    { title: "We run the marketing", body: "Advertising, campaigns, and brand — handled by the club. No ad budget to babysit, no agency to manage." },
+    { title: "We own the relationship", body: "Reminders, seasonal outreach, loyalty and win-back — the club keeps your members coming back for you." },
+    { title: "Steady, predictable demand", body: "A membership base that returns for rotations, seasons, and the next set — not one-and-done walk-ins." },
+    { title: "Held to a standard", body: "The network is vetted. Being a YETI™ shop is a mark of trust drivers look for when they choose where to go." },
+    { title: "Your brand, amplified", body: "The club manages the life-of-brand between you and the driver — so every touch builds loyalty to your bay." },
+  ],
+  cta: "Partner your shop",
+};
+
+// ---- The Network (the trust layer) ----
+export const NETWORK = {
+  heading: "A network held to a standard",
+  body: "Every shop in the YETI™ network is vetted — for workmanship, fair pricing, and how they treat members. The club is the trust layer between the driver and the bay: drivers get a shop that does it right, shops get members who stay. That's the life of the brand, managed.",
+  points: [
+    { k: "Vetted shops", v: "Workmanship & pricing", note: "every partner meets the standard" },
+    { k: "Member pricing", v: "Through the network", note: "club rates, brought to you straight" },
+    { k: "Life-of-vehicle", v: "One relationship", note: "managed for drivers and shops" },
   ],
 };
 
 export const BENEFITS = {
   heading: "Everything tires, handled",
-  sub: "Membership is the easy button — your concierge covers all of it.",
+  sub: "Membership is the easy button — the club covers all of it, then keeps you and your shop connected.",
   items: [
-    { title: "Concierge support", body: "A dedicated pit crew that owns the whole job." },
+    { title: "Concierge support", body: "A dedicated crew that owns the whole job." },
     { title: "Fitment guidance", body: "Exact sizing confirmed for your vehicle — no mismatches." },
     { title: "Product recommendations", body: "Tires matched to your driving, climate, and budget." },
-    { title: "Install coordination", body: "We line up the install with a trusted shop near you." },
+    { title: "Vetted local shops", body: "Routed to a trusted shop near you that meets our standard." },
     { title: "Seasonal assistance", body: "Winter, summer, all-season — switched on your schedule." },
     { title: "Replacement reminders", body: "A heads-up before tread runs low. Never caught out." },
-    { title: "Best-price sourcing", body: "Preferred network pricing, brought to you straight." },
+    { title: "Member pricing", body: "Network pricing, brought to you straight." },
     { title: "One point of contact", body: "No phone trees. The same crew, every time." },
   ],
 };
 
 export const PERFORMANCE = {
   heading: "Held to a performance standard",
-  body:
-    "Every tire we recommend has to earn it. We hold our picks to industry standards for tread-wear, grip, and handling across wet, dry, and winter conditions — so the tire on your car is the right tool for the road, not just whatever's in stock.",
+  body: "YETI™ is a tire brand, too — and every tire we recommend has to earn it. We hold our picks to industry standards for tread-wear, grip, and handling across wet, dry, and winter conditions, so the tire on your car is the right tool for the road, not just whatever's in stock.",
   stats: [
     { k: "Tread-wear", v: "Rated & matched", note: "to how far and how hard you drive" },
     { k: "All-weather grip", v: "Wet · dry · winter", note: "handling verified across conditions" },
@@ -101,26 +110,26 @@ export const PERFORMANCE = {
 
 export const SUSTAINABILITY = {
   heading: "Recycle a set, for every set",
-  body:
-    "For every set of tires we sell, YETI™ recycles a set. Old rubber doesn't belong in a landfill — it becomes roads, playgrounds, and fuel. Performance and responsibility ride together.",
+  body: "For every set of tires we sell, YETI™ recycles a set. Old rubber doesn't belong in a landfill — it becomes roads, playgrounds, and fuel. Performance and responsibility ride together.",
   badge: "1 sold = 1 recycled",
 };
 
 export const FAQ = {
   heading: "Questions, answered",
   items: [
-    { q: "What does it cost to join?", a: "There are no commitments and no membership games — you get the best tires at the best price we can secure, with the concierge service built in. Use the tire finder or reach out and your pit crew will walk you through it." },
-    { q: "Do I have to come into a shop?", a: "No. The whole point is remote. We handle selection, pricing, and shipping, then coordinate the install with a trusted shop near you." },
-    { q: "How do you pick my tires?", a: "Your concierge matches tires to your exact vehicle fitment, your climate, and how you drive — then confirms sizing before anything ships. The tire finder gives you a head start." },
-    { q: "What if I don't know what I need?", a: "That's exactly what the club is for. Tell us the car and how you use it; we translate that into the right tire and the right price." },
+    { q: "What is YETI™ exactly — a brand or a club?", a: "Both. YETI™ is a tire brand and a members club. The club connects you to the right tires and a vetted local shop, then runs the relationship — pricing, reminders, seasons — for the life of your vehicle." },
+    { q: "What does it cost to join as a driver?", a: "There are no commitments and no membership games — you get the best tires at the best price we can secure, routed to a trusted local shop, with the concierge built in. Use the tire finder or reach out and your crew will walk you through it." },
+    { q: "How do you pick my tires and my shop?", a: "We match tires to your exact fitment, climate, and how you drive, then route you to a vetted shop in the network near you. Sizing is confirmed before anything's booked." },
+    { q: "I own a tire shop — how do I join the network?", a: "Use the “Partner your shop” button. YETI™ sends you qualified members and runs the marketing, comms, and follow-up; you do the work in the bay. Every shop is vetted to a standard before joining." },
+    { q: "Is this a franchise?", a: "No. Shops stay independent and keep their own brand. The club is the marketing and relationship layer that drives members to the bay and keeps them coming back." },
     { q: "Do you really recycle tires?", a: "Yes — for every set sold, we recycle a set. It's part of how the club operates." },
   ],
 };
 
 export const JOIN = {
   heading: "Join the YETI™ Tire Club",
-  sub: "No commitments, just the best tires at the best prices — with a pit crew in your corner.",
-  cta: "Call your YETI pit crew",
+  sub: "Drivers: the best tires at the best price, routed to a trusted shop. Shops: qualified members and a club that markets for you.",
+  cta: "Call your YETI crew",
   formLead: "Tell us your ride and we'll take it from here.",
   fields: {
     name: "Your name",
@@ -129,10 +138,10 @@ export const JOIN = {
     message: "How and where do you drive? (optional)",
     submit: "Get my tire match",
   },
-  success: "Thanks — your pit crew will be in touch shortly.",
+  success: "Thanks — your crew will be in touch shortly.",
 };
 
 export const FOOTER = {
-  blurb: "Your automotive concierge. The right tires, at the best price, handled for you.",
+  blurb: "A tire brand and a members club — connecting drivers to the shops that get it right, and running the relationship for both.",
   rights: "YETI™ is a trademark of YETI Tires. All rights reserved.",
 };

@@ -19,7 +19,7 @@ const body = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} | Your Automotive Concierge — High-Performance Tires, Handled`,
+    default: `${SITE.name} | The Tire Club — Right Tires, Vetted Local Shops`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE.name,
-    title: `${SITE.name} — The best tires, at the best price, without the hassle`,
+    title: `${SITE.name} — A tire brand and a members club connecting drivers to trusted local shops`,
     description: SITE.description,
     url: SITE.url,
     images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "YETI Tires — a winding mountain road, built for the road ahead" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} — Your Automotive Concierge`,
+    title: `${SITE.name} — The Tire Club`,
     description: SITE.description,
     images: ["/images/og.jpg"],
   },
