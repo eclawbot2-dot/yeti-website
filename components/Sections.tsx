@@ -95,7 +95,7 @@ export function Shops() {
         </div>
         <Reveal>
           <div className="mt-10">
-            <a href="#join" className="btn-primary">
+            <a href="#partner" className="btn-primary">
               {SHOPS.cta}
             </a>
           </div>

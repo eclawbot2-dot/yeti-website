@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import { Concierge, How, Shops, Network, Benefits, Performance, Sustainability } from "@/components/Sections";
 import Faq from "@/components/Faq";
 import Join from "@/components/Join";
+import ShopJoin from "@/components/ShopJoin";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <How />
         <Shops />
         <Network />
+        <ShopJoin />
         <Benefits />
         <Performance />
         <Sustainability />

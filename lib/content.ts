@@ -145,3 +145,22 @@ export const FOOTER = {
   blurb: "A tire brand and a members club — connecting drivers to the shops that get it right, and running the relationship for both.",
   rights: "YETI™ is a trademark of YETI Tires. All rights reserved.",
 };
+
+// ---- Shop partner intake (the shop side of the club) ----
+export const SHOP_JOIN = {
+  heading: "Partner your shop with YETI™",
+  sub: "Join the network. We send you qualified members and run the marketing, comms, and loyalty — you keep the bay full and the customers for life.",
+  cta: "Talk to our partner team",
+  formLead: "Tell us about your shop and we'll be in touch.",
+  fields: {
+    shop: "Shop name",
+    name: "Your name",
+    email: "Email",
+    phone: "Phone (optional)",
+    location: "City / State",
+    bays: "Number of bays (optional)",
+    message: "Anything else about your shop? (optional)",
+    submit: "Apply to the network",
+  },
+  success: "Thanks — our partner team will reach out shortly.",
+};
