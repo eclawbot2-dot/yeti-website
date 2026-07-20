@@ -14,19 +14,19 @@ export const NAV = [
 export const HERO = {
   eyebrow: "The Tire Club",
   title: "The tire club that routes you to the right shop —",
-  titleAccent: "and stays in your corner.",
-  sub: "YETI™ is a tire brand and a members club. We match you to the right tires, route you to a vetted local shop that does the job right, and run the relationship for the life of your vehicle — pricing, reminders, seasons, the next set.",
-  trust: "Real tires. Trusted local shops. One crew that remembers — for the drivers who join and the shops that serve them.",
+  titleAccent: "and handles the details.",
+  sub: "YETI™ is a tire brand and a members club that brings drivers and great local shops together. We match you to the right tires and a shop that does the job right, then handle the details — fair pricing, booking, reminders, the next set — so it's easy for you and good business for the shop.",
+  trust: "A cooperative, not a middleman — drivers and local shops on the same side, with YETI™ making it work for both.",
 };
 
 // ---- For Drivers (the member value) ----
 export const CONCIERGE = {
   heading: "For drivers: your crew, your shop, handled",
-  lead: "Anyone can sell you a tire. YETI™ gives you a club that owns the whole job — the right tires, a trusted local shop, and someone who remembers your vehicle, so you never decode a spec sheet or chase a shop again.",
+  lead: "Buying tires shouldn't mean decoding spec sheets or chasing a shop. YETI™ handles the whole job — the right tires, a trusted local shop that does great work, and someone who remembers your vehicle — so it's simple for you and steady business for them.",
   values: [
     { title: "A dedicated human", body: "One concierge who knows your vehicle and how you drive — not a call center, not a chatbot. Same crew, every time." },
     { title: "We do the research", body: "Load index, speed rating, fitment, tread-wear, all-weather grip — we translate the jargon and bring you the right call." },
-    { title: "Member pricing", body: "Club pricing sourced through our shop network, brought to you straight — no upsell theater." },
+    { title: "Fair member pricing", body: "Club pricing that's a good deal for you and fair to the shop — a straight number, no games on either side." },
     { title: "Routed to a vetted shop", body: "Matched to a trusted local shop that meets our standard — appointment booked, install coordinated." },
     { title: "We remember, so you don't", body: "Seasonal swaps, replacement reminders before tread runs low, a record of what's on your car. Handled in the background." },
     { title: "One relationship, for life", body: "Tires, rotations, seasons, the next set — one point of contact for the life of your vehicle. That's the club." },
@@ -75,7 +75,7 @@ export const SHOPS = {
 // ---- The Network (the trust layer) ----
 export const NETWORK = {
   heading: "A network held to a standard",
-  body: "Every shop in the YETI™ network is vetted — for workmanship, fair pricing, and how they treat members. The club is the trust layer between the driver and the bay: drivers get a shop that does it right, shops get members who stay. That's the life of the brand, managed.",
+  body: "YETI™ is a cooperative — drivers and local shops on the same team. Every shop in the network is vetted for workmanship and fair pricing, and the club is the trust layer between the driver and the bay: drivers get a shop that does it right, shops get loyal members who keep coming back. Everybody wins, and the brand is stronger for it.",
   points: [
     { k: "Vetted shops", v: "Workmanship & pricing", note: "every partner meets the standard" },
     { k: "Member pricing", v: "Through the network", note: "club rates, brought to you straight" },
