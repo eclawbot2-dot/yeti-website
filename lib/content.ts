@@ -4,7 +4,6 @@
 // Honest — no fabricated stats, reviews, brands, prices, or shop counts.
 
 export const NAV = [
-  { label: "The Co-op", href: "#coop" },
   { label: "For Drivers", href: "#drivers" },
   { label: "For Shops", href: "#shops" },
   { label: "How It Works", href: "#how" },
@@ -164,36 +163,4 @@ export const SHOP_JOIN = {
     submit: "Apply to the network",
   },
   success: "Thanks — our partner team will reach out shortly.",
-};
-
-// ---- The Co-op (the win-win thesis: drivers <-> YETI <-> shops) ----
-export const COOP = {
-  eyebrow: "The Co-op",
-  heading: "One club. Drivers and shops, on the same side.",
-  lead: "YETI™ isn't a middleman taking a cut — it's a cooperative. We connect drivers with great local shops and run the relationship so both sides come out ahead. Everybody wins, and the brand gets stronger every time.",
-  drivers: {
-    label: "Drivers get",
-    points: [
-      "The right tires, matched to how you drive",
-      "A trusted local shop that does great work",
-      "Fair member pricing — no games",
-      "The details handled: booking, reminders, seasons",
-      "One relationship for the life of the vehicle",
-    ],
-  },
-  hub: {
-    label: "YETI™ runs the co-op",
-    body: "Matching, fair pricing, marketing, comms, and loyalty — handled for both sides, so the relationship keeps working.",
-  },
-  shops: {
-    label: "Shops get",
-    points: [
-      "Ready-to-buy members routed to the bay",
-      "Marketing and advertising run for them",
-      "Loyal customers who keep coming back",
-      "No ad budget to babysit",
-      "Their own brand, amplified",
-    ],
-  },
-  footnote: "A cooperative, not a middleman. When drivers win and shops win, the whole brand wins.",
 };
